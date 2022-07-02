@@ -1,20 +1,22 @@
 import './App.css';
-import MainPageClass from "./pages/mainPageClass/MainPageClass";
-import MainPageFunc from "./pages/mainPageFunc/MainPageFunc";
-import UsersPage from "./pages/usersPage/UsersPage";
-import ContactsPage from "./pages/ContactsPage/ContactsPage";
+import MainPage from "./pages/mainPage/MainPage";
+import AboutPage from "./pages/aboutPage/AboutPage";
+import PortfolioPage from "./pages/portfolioPage/PortfolioPage";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
     return (
-        <div className="App">
-            {/*<MainPageClass/>*/}
-            {/*---------------------------------------*/}
-            {/*<MainPageFunc/>*/}
-            {/*---------------------------------------*/}
-            {/*<UsersPage/>*/}
-
-            <ContactsPage/>
-        </div>
+        <BrowserRouter>
+            <Header/>
+            <Routes>
+                <Route path="/" element={ <MainPage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/portfolio" element={<PortfolioPage/>}/>
+            </Routes>
+            <Footer/>
+        </BrowserRouter>
     );
 }
 
