@@ -1,22 +1,14 @@
 import './App.css';
-import MainPage from "./pages/mainPage/MainPage";
-import AboutPage from "./pages/aboutPage/AboutPage";
-import PortfolioPage from "./pages/portfolioPage/PortfolioPage";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CreateUser from "./pages/createUser/CreateUser";
+
+
 
 function App() {
     return (
-        <BrowserRouter>
-            <Header/>
-            <Routes>
-                <Route path="/" element={ <MainPage/>}/>
-                <Route path="/about" element={<AboutPage/>}/>
-                <Route path="/portfolio" element={<PortfolioPage/>}/>
-            </Routes>
-            <Footer/>
-        </BrowserRouter>
+        <div className="container pt-5">
+            <CreateUser/>
+        </div>
     );
 }
 
