@@ -10,6 +10,9 @@ function Header() {
             <li>
                 <NavLink to="/blogs"> blogs</NavLink>
             </li>
+            <li>
+                <NavLink to="/about"> about</NavLink>
+            </li>
         </ul>
     );
 }
